@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def fork():
-    with open("data.csv", "w", encoding="utf-8", newline="") as file:
+    with open("test_1.csv", "w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["process", "time"])
         start_point_time = time.perf_counter()
@@ -13,7 +13,7 @@ def fork():
             time.sleep(1)
     return True
 def graph():
-    with open("data.csv", "r", encoding="utf-8") as file:
+    with open("test_1.csv", "r", encoding="utf-8") as file:
         data = list(csv.reader(file))[1:]
         processes = [int(line[0]) for line in data]
         date_time = [_+1 for _ in range(len(data))]

@@ -1,0 +1,1 @@
+python D:\operating_systems\lab1\win\win_make_csv.py
