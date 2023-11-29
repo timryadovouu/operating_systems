@@ -1,18 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <sys/mman.h>
 
-int main() {
-    while (1) {
-        void* mem = malloc(4096);
-        if (mem == NULL) {
-            printf("Не удалось выделить память\n");
-            break;
-        }
-        // Заполняем память нулями
-        memset(mem, 0, 4096);
-        //sleep(1); // Пауза в 1 секунду
-        //free(mem); // Освобождаем память
+int main(){
+    while(1){
+        int N = 100*1024*1024;
+        int *ptr = mmap(NULL, N*sizeof(int), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
+        for (int i=0; i<N; i++)
+            ptr[i] = 1;
     }
     return 0;
 }

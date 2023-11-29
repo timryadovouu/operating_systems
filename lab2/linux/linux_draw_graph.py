@@ -1,16 +1,19 @@
 import csv
 import matplotlib.pyplot as plt
-
+def plot_memory_graph(times, free_memory):
+    plt.plot(times, free_memory, marker='o')
+    plt.title('Свободная память во времени')
+    plt.xlabel('Время')
+    plt.ylabel('Свободная память (МБ)')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
 def graph():
-    with open("linux_make_csv.py", "r", encoding="utf-8") as file:
+    with open("free_memory_1.csv", "r", encoding="utf-8") as file:
         data = list(csv.reader(file))[1:]
         free_memory = [int(line[0]) for line in data]
-        date_time = [_+1 for _ in range(len(data))]
-    plt.xlabel('date_time')
-    plt.ylabel('free_memorry')
-    plt.plot(date_time, free_memory, 'o-g', label='prcs(t)')
-    plt.legend()
-    plt.show()
-    return [line[1] for line in data]
+        date_time = [line[1] for line in data]
+        plot_memory_graph(date_time, free_memory)
 
-print(graph())
+graph()
+
