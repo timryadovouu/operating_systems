@@ -1,0 +1,3 @@
+nasm -f elf64 -o check_vm.o check_vm.asm
+ld -m elf_x86_64 -o check_vm check_vm.o
+./check_vm

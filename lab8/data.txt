@@ -1,0 +1,27 @@
+sudo aa-autodep /home/tim/_folder/lab8/prog
+sudo aa-complain /home/tim/_folder/lab8/prog
+sudo cat /etc/apparmor.d/home.tim._folder.lab8.prog
+sudo nvim /etc/apparmor.d/home.tim._folder.lab8.prog
+
+# Last Modified: Tue Jan  2 17:12:58 2024
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/tim/_folder/lab8/prog flags=(complain) {
+  include <abstractions/base>
+
+  deny /usr/bin/dash x,
+
+  /home/tim/_folder/lab8/prog mr,
+}
+
+sudo aa-enforce /etc/apparmor.d/home.tim._folder.lab8.prog 
+
+--------------------------------------------------------------
+
+yum install selinux-policy-mls
+
+	
+
+

@@ -1,0 +1,57 @@
+gcc tcmalloc.c  -ltcmalloc
+
+0 mb in 0.000028 seconds
+128 mb in 0.000491 seconds
+256 mb in 0.000621 seconds
+384 mb in 0.001003 seconds
+512 mb in 0.001367 seconds
+640 mb in 0.002063 seconds
+768 mb in 0.002613 seconds
+896 mb in 0.003154 seconds
+1024 mb in 0.003870 seconds
+1152 mb in 0.004285 seconds
+1280 mb in 0.004890 seconds
+1408 mb in 0.005667 seconds
+1536 mb in 0.005451 seconds
+1664 mb in 0.004446 seconds
+1792 mb in 0.003927 seconds
+1920 mb in 0.003917 seconds
+
+
+gcc malloc.c
+
+0 mb in 0.000040 seconds
+128 mb in 0.000577 seconds
+256 mb in 0.000751 seconds
+384 mb in 0.001141 seconds
+512 mb in 0.001659 seconds
+640 mb in 0.002340 seconds
+768 mb in 0.003087 seconds
+896 mb in 0.003758 seconds
+1024 mb in 0.003958 seconds
+1152 mb in 0.004307 seconds
+1280 mb in 0.004887 seconds
+1408 mb in 0.005665 seconds
+1536 mb in 0.004634 seconds
+1664 mb in 0.003923 seconds
+1792 mb in 0.003922 seconds
+1920 mb in 0.003916 seconds
+
+gcc calloc.c
+
+0 mb in 0.000070 seconds
+128 mb in 0.031740 seconds
+256 mb in 0.024592 seconds
+384 mb in 0.024627 seconds
+512 mb in 0.026314 seconds
+640 mb in 0.028843 seconds
+768 mb in 0.030880 seconds
+896 mb in 0.033110 seconds
+1024 mb in 0.034525 seconds
+1152 mb in 0.036441 seconds
+1280 mb in 0.038789 seconds
+1408 mb in 0.024227 seconds
+1536 mb in 0.026139 seconds
+1664 mb in 0.028290 seconds
+1792 mb in 0.031771 seconds
+1920 mb in 0.032926 seconds
